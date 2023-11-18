@@ -7,7 +7,7 @@ table {
 	border-bottom: 3px solid #fff;
 	border-collapse: collapse; 
 	outline: 3px solid #ffd300;
-	font-size: 15px;
+	font-size: 20px;
 	background: #fff!important;
 }
 table th {
@@ -16,7 +16,7 @@ table th {
 	background: #ffd300;
 	border: none;
 	text-align: left;
-	font-size: 15px;
+	font-size: 20px;
 	border-top: 3px solid #fff;
 	border-bottom: 3px solid #ffd300;
 }
@@ -25,7 +25,7 @@ table td {
 	border: none;
 	border-top: 3px solid #fff;
 	border-bottom: 3px solid #fff;
-	font-size: 15px;
+	font-size: 20px;
 }
 table tbody tr:nth-child(even){
 	background: #f8f8f8!important;
