@@ -22,9 +22,10 @@ function contentTable(data) {
     result = result + "<tr>";
     for (let dataRowKey in row) {
       result =
-        result + "<td>" + (dataRowKey == "id"
-          ? String(++counter)
-          : row[dataRowKey]) + "</td>";
+        result +
+        "<td>" +
+        (dataRowKey == "id" ? String(++counter) : row[dataRowKey]) +
+        "</td>";
     }
     result = result + "</tr>";
   }
@@ -43,7 +44,8 @@ const config1 = {
 
 const users = [
   { id: 30050, name: "Вася", surname: "Петров", age: 12 },
-  { id: 30051, name: "Вася", surname: "Васечкін", age: 15 },
+  { id: 30051, name: "Олег", surname: "Васечкін", age: 15 },
+  { id: 30052, name: "Петро", surname: "Пупкін", age: 20 },
 ];
 
 DataTable(config1, users);
