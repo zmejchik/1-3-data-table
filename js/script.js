@@ -43,9 +43,14 @@ const config1 = {
 };
 
 const users = [
-  { id: 30050, name: "Вася", surname: "Петров", age: 12 },
-  { id: 30051, name: "Олег", surname: "Васечкін", age: 15 },
-  { id: 30052, name: "Петро", surname: "Пупкін", age: 20 },
+  { id: 30050, name: 'Вася', surname: 'Петров', age: 12 },
+  { id: 30051, name: 'Вася', surname: 'Васечкін', age: 15 },
+  { id: 30050, name: 'Вася', surname: 'Петров', age: 18 },
+  { id: 30051, name: 'Тарас', surname: 'Шевченко', age: 35 },
+  { id: 30050, name: 'Толя', surname: 'Васечкін', age: 47 },
+  { id: 30051, name: 'Ліна', surname: 'Костенко', age: 31 },
+  { id: 30051, name: 'Лариса', surname: 'Косач', age: 25 },
+  { id: 30051, name: 'Юля', surname: 'Мойсик', age: 30 },
 ];
 
 DataTable(config1, users);
