@@ -7,7 +7,7 @@ function DataTable(config, data) {
 }
 
 function titleRow(config) {
-  let result = "<thead> <tr> <th>N</th>";
+  let result = "<thead> <tr> <th>№</th>";
   for (let element of config.columns) {
     result = result + "<th>" + element.title + "</th>";
   }
