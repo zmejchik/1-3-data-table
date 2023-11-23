@@ -1,11 +1,12 @@
-function DataTable(config, data) {
+function DataTable(config, data) {  
+  configurations = configurations.set(config,data);
   const content =
-    "<table>" + titleRow(config) + contentTable(data) + "</table>";
+    "<table>" + titleRow(config,data) + contentTable(data) + "</table>";
   const tableInBody = document.querySelector(config.parent);
   tableInBody.innerHTML = content;
 }
 
-function titleRow(config) {
+function titleRow(config, data) {
   let result = "<thead> <tr> <th>№</th>";
   for (let element of config.columns) {
     result +=
@@ -36,13 +37,12 @@ function contentTable(data) {
 
 function sortingTable(nameColumn, tableId) {  
   sortOrder *= -1;
-
-  const currentData = users.slice();
-
-  currentData.sort((a, b) => {
+  config = getConfig(tableId)[0];
+  const result = getConfig(tableId)[1];
+  console.log(result);
+  result.sort((a, b) => {
     let A = a[nameColumn];
     let B = b[nameColumn];
-
     if (!isNaN(parseFloat(A)) && !isNaN(parseFloat(B))) {
       return sortOrder * (parseFloat(A) - parseFloat(B));
     } else {
@@ -52,6 +52,16 @@ function sortingTable(nameColumn, tableId) {
     }
   });
 
-  DataTable({ parent: tableId, columns: config1.columns }, currentData);
+  DataTable(config, result);
 };
 
+function getConfig(tableId){
+  let foundConfig = null;
+  for (const [config, value] of configurations) {
+    if (config.parent === tableId) {
+      foundConfig = [config, value];
+      break;
+    }
+  }
+  return foundConfig;
+}
