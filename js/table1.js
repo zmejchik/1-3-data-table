@@ -1,5 +1,4 @@
-let sortOrder = 1;
-let configurations = new Map();
+
 const config1 = {
   parent: "#usersTable",
   columns: [

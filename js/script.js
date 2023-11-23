@@ -1,3 +1,5 @@
+let sortOrder = 1;
+let configurations = new Map();
 function DataTable(config, data) {  
   configurations = configurations.set(config,data);
   const content =
