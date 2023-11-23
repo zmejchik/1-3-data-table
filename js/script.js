@@ -55,16 +55,3 @@ function sortingTable(nameColumn, tableId) {
   DataTable({ parent: tableId, columns: config1.columns }, currentData);
 };
 
-/* Tabulator */
-//create Tabulator on DOM element with id "example-table"
-var table = new Tabulator("#example-table", {
-  height: "100%", // set height of table (in CSS or here), this enables the Virtual DOM and improves render speed dramatically (can be any valid css height value)
-  data: users, //assign data to table
-  layout: "fitColumns", //fit columns to width of table (optional)
-  columns: [
-    //Define Table Columns
-    { title: "Ім'я", field: "name", width: 150 },
-    { title: "Прізвище", field: "surname" },
-    { title: "Вік", field: "age" },
-  ],
-});
