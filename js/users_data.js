@@ -1,3 +1,5 @@
+let sortOrder = 1;
+let configurations = new Map();
 
 const config1 = {
   parent: "#usersTable",
@@ -32,14 +34,14 @@ const config2 = {
 };
 
 const users2 = [
-  { id: 30050, name: "Вася", surname: "Петров", age: 12,male:"Male" },
-  { id: 30051, name: "Вася", surname: "Васечкін", age: 15,male:"Male" },
-  { id: 30050, name: "Вася", surname: "Петров", age: 18,male:"Male" },
-  { id: 30051, name: "Тарас", surname: "Шевченко", age: 35,male:"Male" },
-  { id: 30050, name: "Толя", surname: "Васечкін", age: 47,male:"Male" },
-  { id: 30051, name: "Ліна", surname: "Костенко", age: 31,male:"Female" },
-  { id: 30051, name: "Лариса", surname: "Косач", age: 25,male:"Female" },
-  { id: 30051, name: "Юля", surname: "Мойсик", age: 30,male:"Female" },
+  { id: 30050, name: "Вася", surname: "Петров", age: 12, male: "Male" },
+  { id: 30051, name: "Вася", surname: "Васечкін", age: 15, male: "Male" },
+  { id: 30050, name: "Вася", surname: "Петров", age: 18, male: "Male" },
+  { id: 30051, name: "Тарас", surname: "Шевченко", age: 35, male: "Male" },
+  { id: 30050, name: "Толя", surname: "Васечкін", age: 47, male: "Male" },
+  { id: 30051, name: "Ліна", surname: "Костенко", age: 31, male: "Female" },
+  { id: 30051, name: "Лариса", surname: "Косач", age: 25, male: "Female" },
+  { id: 30051, name: "Юля", surname: "Мойсик", age: 30, male: "Female" },
 ];
 
 DataTable(config2, users2);
