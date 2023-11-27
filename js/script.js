@@ -6,13 +6,14 @@
 function DataTable(config, data) {
   // Save the created table in a map where key: config, data: users' data
   configurations.set(config, data);
-  
+
   // Construct the table content
-  const content = "<table>" + titleRow(config) + contentTable(data) + "</table>";
-  
+  const content =
+    "<table>" + titleRow(config) + contentTable(data) + "</table>";
+
   // Get the table element in the body
   const tableInBody = document.querySelector(config.parent);
-  
+
   // Set the content in the table element
   tableInBody.innerHTML = content;
 }
@@ -24,7 +25,7 @@ function DataTable(config, data) {
  */
 function titleRow(config) {
   let result = "<thead> <tr> <th>№</th>";
-  
+
   // Iterate through columns in the configuration and create th elements
   for (let element of config.columns) {
     result +=
@@ -32,7 +33,7 @@ function titleRow(config) {
       element.title +
       "</th>";
   }
-  
+
   result += "</tr> </thead>";
   return result;
 }
@@ -45,21 +46,21 @@ function titleRow(config) {
 function contentTable(data) {
   let result = "<tbody>";
   let counter = 0; // count row in table
-  
+
   // Iterate through each row of data and populate the table cells
   for (let row of data) {
     result += "<tr>";
-    
+
     for (let dataRowKey in row) {
       result +=
         "<td>" +
         (dataRowKey === "id" ? String(++counter) : row[dataRowKey]) +
         "</td>";
     }
-    
+
     result += "</tr>";
   }
-  
+
   result += "</tbody>";
   return result;
 }
@@ -71,17 +72,17 @@ function contentTable(data) {
  */
 function sortingTable(nameColumn, tableId) {
   sortOrder *= -1;
-  
+
   // Get the table with the selected tableId
   const table = getConfig(tableId);
   let config = table[0];
   const data = table[1];
-  
+
   // Sort the data based on the selected column
   data.sort((a, b) => {
     let A = a[nameColumn];
     let B = b[nameColumn];
-    
+
     if (!isNaN(parseFloat(A)) && !isNaN(parseFloat(B))) {
       return sortOrder * (parseFloat(A) - parseFloat(B));
     } else {
@@ -90,7 +91,7 @@ function sortingTable(nameColumn, tableId) {
       return 0;
     }
   });
-  
+
   // Repaint the table after sorting
   DataTable(config, data);
 }
@@ -102,7 +103,7 @@ function sortingTable(nameColumn, tableId) {
  */
 function getConfig(tableId) {
   let foundConfig = null;
-  
+
   // Iterate through configurations to find the matching tableId
   for (const [config, value] of configurations) {
     if (config.parent === tableId) {
@@ -110,6 +111,6 @@ function getConfig(tableId) {
       break;
     }
   }
-  
+
   return foundConfig;
 }
