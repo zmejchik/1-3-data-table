@@ -36,7 +36,7 @@ DataTable(tableConfig, tableData);
 
 After creating the table, you can click on the column header to sort the data. This action automatically triggers the `sortingTable` function, which resorts the data and updates the table with the sorted data.
 
-### Example:
+### Example
 
 ```html
 <!DOCTYPE html>
