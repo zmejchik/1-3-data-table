@@ -54,7 +54,7 @@ function contentTable(data) {
  */
 function sortingTable(nameColumn, tableId) {
   sortOrder *= -1;
-  table = getConfig(tableId); //get table with selected id table
+  let table = getConfig(tableId); //get table with selected id table
   config = table[0];
   const data = table[1];
   data.sort((a, b) => {
