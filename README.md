@@ -2,7 +2,8 @@
 
 ## Step 1: Include the Script on Your Webpage
 
-Before using this library, ensure that the script containing the described functions is connected to your HTML page:
+Before using this library, ensure that the script containing the described 
+functions is connected to your HTML page:
 
 ```html
 <script src="path_to_your_script.js"></script>
@@ -34,7 +35,9 @@ DataTable(tableConfig, tableData);
 
 ## Step 3: Interactive Sorting
 
-After creating the table, you can click on the column header to sort the data. This action automatically triggers the `sortingTable` function, which resorts the data and updates the table with the sorted data.
+After creating the table, you can click on the column header to sort the data. 
+This action automatically triggers the `sortingTable` function, which resorts 
+the data and updates the table with the sorted data.
 
 ### Example
 
